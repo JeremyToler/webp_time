@@ -33,7 +33,7 @@ def main(source):
     files = get_files(source)
     for file in files:
         filepath = os.path.join(source, file)
-        noext = Path(filepath.lower()).stem
+        noext = Path(filepath).stem
         saveas = os.path.join(source, noext)
         convert_to_webp(filepath, saveas)
 
